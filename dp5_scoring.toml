@@ -1,0 +1,36 @@
+#DP5 scoring template
+
+
+type = "geometric_mean"
+parallel = false
+
+[[component]]
+[component.molecularformula]
+
+[[component.molecularformula.endpoint]]
+name = "Molecular Formula"
+weight = 1
+params.mean_function = "geometric"
+params.molecular_formula = "C16H26O"
+
+
+[[component]]
+[component.DP5]
+
+
+[[component.DP5.endpoint]]
+
+weight = 1
+name = "CMAE"  
+params.python_path = "/home/twm38/.conda/envs/DP5/bin/python"
+params.pydp4_path = "/scratch/twm38/REINVENT/REINVENTDP5/PyDP4.py"
+params.nmr_file = "/scratch/twm38/REINVENTData/NMR/S6NMR"
+params.workflow = "cmae"
+transform.type = "sigmoid"
+transform.high = 0
+transform.low = 7
+transform.k = 0.7
+
+
+
+
