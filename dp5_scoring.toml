@@ -21,11 +21,11 @@ params.molecular_formula = "C16H26O"
 [[component.DP5.endpoint]]
 
 weight = 1
-name = "CMAE"  
-params.python_path = "/home/twm38/.conda/envs/DP5/bin/python"
-params.pydp4_path = "/scratch/twm38/REINVENT/REINVENTDP5/PyDP4.py"
-params.nmr_file = "/scratch/twm38/REINVENTData/NMR/S6NMR"
-params.workflow = "cmae"
+name = "score"  
+params.python_path = "/home/twm38/.conda/envs/DP5/bin/python" #Path to python environment for DP4
+params.pydp4_path = "/scratch/twm38/REINVENT/REINVENTDP5/PyDP4.py" #path to PyDP4.py file
+params.nmr_file = "/scratch/twm38/REINVENTData/NMR/S6NMR" #path to NMR file in plain text format
+params.workflow = "cmae" #dp5, cmae, cmax or rmse
 transform.type = "sigmoid"
 transform.high = 0
 transform.low = 7
